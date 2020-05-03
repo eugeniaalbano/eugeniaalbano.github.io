@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css" />
+    <script>
+
+
+const expectedAns = 2554;
+
+
+    </script>
+    <style>
+@keyframes nope {
+  from { padding-left: -23px; }
+  to   { padding-left:  23px; }
+}
+
+body {
+  background-color:dimgrey;
+  background-image: url("imagedoc-darknoise.png");
+  color:gainsboro;
+}
+
+#outer {
+  max-width: 800px;
+  margin: auto;
+  animation-duration: 100ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+}
+
+.outer p {
+  text-align:left;
+}
+
+.outer img {
+  max-width: 400px;
+  display:block;
+  margin: auto;
+}
+
+.outer .inner {
+  padding-top: 20px;
+  max-width: 780px;
+}
+.outer input {
+  max-width: 650px;
+}
+.outer button {
+  float: none;
+  width:300px;
+  margin: auto;
+  display: block;
+}
+    </style>
+  </head>
+  <body>
+    <div id="outer" class="outer">
+      <p style="font-size:24pt;font-family:Helvetica">Eh no aspetta… non è così facile!</p>
+      <p style="font-size:12pt;font-family:'Courier New', Courier, monospace">Prima dobbiamo essere sicure che sia davvero tu.</p>
+      <p style=font-size:12pt>Non vorremmo che questa magica sorpresa finisse nelle mani di qualche sconosciuto.</p>
+      <p style=font-size:12pt>Per questo abbiamo pensato a un test molto personalizzato per essere sicure che tu non sia un robot.</p>
+      <p style=font-size:24pt>Sei pronta?</p>
+      <div class="inner">
+        <form id="form" action="chi_siamo.html">
+          <button id="okButton">Sono pronta!</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
+<script>

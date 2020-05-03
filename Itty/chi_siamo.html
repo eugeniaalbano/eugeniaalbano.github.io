@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css" />
+    <script>
+
+
+const expectedAns = 7561;
+
+
+    </script>
+    <style>
+@keyframes nope {
+  from { padding-left: -23px; }
+  to   { padding-left:  23px; }
+}
+
+body {
+  background-color:dimgrey;
+  background-image: url("imagedoc-darknoise.png");
+  color:gainsboro;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+#outer {
+  max-width: 800px;
+  margin: auto;
+  animation-duration: 100ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+}
+
+.outer p {
+  text-align:center;
+}
+
+.outer img {
+  max-width: 780px;
+  display:block;
+  margin: auto;
+}
+
+.outer .inner {
+  padding-top: 20px;
+  max-width: 780px;
+}
+.outer input {
+  max-width: 650px;
+}
+.outer button {
+  float: right;
+  max-width: 100px;
+}
+    </style>
+  </head>
+  <body>
+    <div id="outer" class="outer">
+      <p style=font-size:20pt>Round di riscaldamento.</p> 
+      <p style=font-size:20pt>Chi sono le tue migliori amiche?</p>
+      <img src="amiche.png">
+      <div class="inner">
+        <form id="form">
+          <input id="answer" style="width:650px">
+          <button id="okButton" style="width:100px">Ok</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+function hash(s) {
+  var h = 8191
+  for (i = 0; i < s.length; ++i) {
+    h = (h * 533 ^ s.charCodeAt(i)) % 16384;
+  }
+  return h
+}
+
+function checkAnswer() {
+  const ans = answer.value.toLowerCase().replace(/ /g, '_')
+  if (hash(ans) === expectedAns) {
+    console.log("Hey")
+    document.location = ans + ".html"
+  }
+  else {
+    console.debug("Expected", expectedAns, "but got", hash(ans))
+    outer.style.setProperty("animation-name", "nope")
+    window.setTimeout(() => {
+      outer.style.setProperty("animation-name", "none")
+    }, 300)
+  }
+}
+
+form.addEventListener('submit', (ev) => {
+  ev.preventDefault()
+  checkAnswer()
+})
+</script>
