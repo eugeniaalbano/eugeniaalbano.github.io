@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
     <script>
 
 
@@ -18,9 +19,12 @@ const expectedAns = 2554;
 
 body {
   background-color:dimgrey;
-  background-image: url("imagedoc-darknoise.png");
+  background-image: url("inizio2.gif");
+  background-size:120%;
+  background-position-x: center;
+  background-position-y:initial;
   color:gainsboro;
-  font-family:Arial, Helvetica, sans-serif;
+  font-family:'Roboto', sans-serif;
 }
 
 #outer {
@@ -54,16 +58,39 @@ body {
   margin: auto;
   display: block;
 }
+.title {
+  font-size: 42pt;
+  font-family:'Roboto', sans-serif;
+  font-weight:300;
+  line-height: 48pt;
+  background-color:black;
+}
+.title2 {
+  font-size: 42pt;
+  font-family:'Roboto', sans-serif;
+  font-weight:300;
+  line-height: 48pt;
+  background-color:black;
+}
+.small{
+  font-size: 16pt;
+  font-family:'Roboto', sans-serif;
+  font-weight:300;
+}
+.button{
+  font-size: 28pt;
+  font-family:'Roboto', sans-serif;
+  font-weight:500;
+}
     </style>
   </head>
   <body>
     <div id="outer" class="outer">
-      <img src="inizio.gif">
-      <p>Buon compleanno cara Itty!</p>
-      <p>Abbiamo una sorpresa per te!</p>
+      <p class="title">Buon compleanno Itty!</p>
+      <p class="title2">Abbiamo una sorpresa per te!</p>
       <div class="inner">
         <form id="form" action="sono_pronta.html">
-          <button id="okButton">Dammi la mia sorpresa!</button>
+          <button class="button" id="okButton">Dammi la mia sorpresa!</button>
         </form>
       </div>
     </div>

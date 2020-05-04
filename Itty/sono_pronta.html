@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
     <script>
-
 
 const expectedAns = 2554;
 
@@ -18,8 +18,10 @@ const expectedAns = 2554;
 
 body {
   background-color:dimgrey;
-  background-image: url("imagedoc-darknoise.png");
+  background-image: url("sfondo5.jpg");
+  background-size:100%;
   color:gainsboro;
+  font-family:'Roboto', sans-serif;
 }
 
 #outer {
@@ -53,18 +55,37 @@ body {
   margin: auto;
   display: block;
 }
+.title {
+  text-align:center !important;
+  font-size: 42pt;
+  font-family:'Roboto', sans-serif;
+  line-height: 24pt;
+  font-weight:300;
+}
+.small{
+  font-size: 12pt;
+  font-family:'Roboto', sans-serif;
+  font-weight:300;
+  line-height: 2pt;
+  text-align: left;
+}
+.button{
+  font-size: 28pt;
+  font-family:'Roboto', sans-serif;
+  font-weight:300;
+}
     </style>
   </head>
   <body>
     <div id="outer" class="outer">
-      <p style="font-size:24pt;font-family:Helvetica">Eh no aspetta… non è così facile!</p>
-      <p style="font-size:12pt;font-family:'Courier New', Courier, monospace">Prima dobbiamo essere sicure che sia davvero tu.</p>
-      <p style=font-size:12pt>Non vorremmo che questa magica sorpresa finisse nelle mani di qualche sconosciuto.</p>
-      <p style=font-size:12pt>Per questo abbiamo pensato a un test molto personalizzato per essere sicure che tu non sia un robot.</p>
-      <p style=font-size:24pt>Sei pronta?</p>
+      <p class="title">Eh no aspetta… non è così facile!</p>
+      <p class="small">Prima dobbiamo essere sicure che sia davvero tu.</p>
+      <p class="small">Non vorremmo che questa magica sorpresa finisse nelle mani di qualche sconosciuto.</p>
+      <p class="small">Per questo abbiamo preparato una caccia al tesoro per essere sicure che tu non sia un robot.</p>
+      <p class="title">Sei pronta?</p>
       <div class="inner">
         <form id="form" action="chi_siamo.html">
-          <button id="okButton">Sono pronta!</button>
+          <button class="button" id="okButton">Sono pronta!</button>
         </form>
       </div>
     </div>

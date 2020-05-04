@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <script>
 
 
@@ -18,9 +19,10 @@ const expectedAns = 7561;
 
 body {
   background-color:dimgrey;
-  background-image: url("imagedoc-darknoise.png");
+  background-image: url("sfondo5.jpg");
+  background-size:100%;
   color:gainsboro;
-  font-family:Arial, Helvetica, sans-serif;
+  font-family:Roboto, sans-serif;
 }
 
 #outer {
@@ -52,17 +54,27 @@ body {
   float: right;
   max-width: 100px;
 }
+.title {
+  font-size: 48pt;
+  font-family:'Roboto', sans-serif;
+  font-weight:300;
+}
+.small{
+  font-size: 16pt;
+  font-family:'Roboto', sans-serif;
+  font-weight:300;
+}
     </style>
   </head>
   <body>
     <div id="outer" class="outer">
-      <p style="font-size:60pt;">Round di riscaldamento.</p> 
-      <p style=font-size:20pt>Chi sono le tue migliori amiche?</p>
+      <p class="title">Round di riscaldamento.</p> 
+      <p class="small">Chi sono le tue migliori amiche?</p>
       <img src="amiche.png">
       <div class="inner">
         <form id="form">
           <input id="answer" style="width:650px">
-          <button id="okButton" style="width:100px">Ok</button>
+          <button id="okButton" style="width:100px">OK</button>
         </form>
       </div>
     </div>
